@@ -10,7 +10,6 @@ import org.springframework.util.StringUtils;
  * @create 2020/08/28:22:31
  */
 public class stringUtils {
-
     public static boolean isEmpty(CharSequence str) {
         return (str == null || str.length() == 0);
     }
@@ -20,7 +19,7 @@ public class stringUtils {
     }
 
     /*isEmpty  isBlank  结论
-    通过以上代码对比我们可以看出:
+    通过以上代码对比我们可以看出: qiuling
       1.isEmpty 没有忽略空格参数,是以是否为空和是否存在为判断依据。
       2.isBlank 是在isEmpty的基础上进行了为空(字符串都为空格,制表符,tab的情况)的判断.(一般更为常用)
     大家可以看下面的例子去体会一下
@@ -49,7 +48,7 @@ public class stringUtils {
 
     public static void main(String[] args) {
         String bg="EBG";
-        System.out.println(base.BGLIST);
+        // System.out.println(base.BGLIST);
         if(bg.equals(base.EBG)){
             System.out.println("相等 ：" + bg);
         }
