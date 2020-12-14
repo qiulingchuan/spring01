@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+      <!--通过构造体传值-->
+    <!--  <bean class="com.spm.om.vo.User" id="user">
+          <constructor-arg name="id" value="3"/>
+          <constructor-arg name="userName" value="qiulll"/>
+          <constructor-arg name="address" value="wuh"/>
+      </bean>-->
+    <!--get,set传值-->
+     <bean class="com.spm.om.vo.User" id="user2">
+         <property name="id" value="4"/>
+         <property name="userName" value="qiulc32"/>
+         <property name="address" value="bj"/>
+         <property name="cat" ref="cat"/>
+         <property name="catlist">
+             <array>
+                 <ref bean="cat"/>
+                 <bean class="com.spm.om.vo.Cat" id="cat2">
+                     <property name="name" value="cat2Name"></property>
+                     <property name="remark" value="cat2Remark"></property>
+                 </bean>
+             </array>
+         </property>
+         <property name="favorites">
+             <list>
+                 <value>足球</value>
+                 <value>篮球</value>
+             </list>
+         </property>
+         <property name="details">
+             <map>
+                 <entry key="gender" value="男" />
+                 <entry key="age" value="50" />
+             </map>
+         </property>
+         <property name="info">
+             <props>
+                 <prop key="phone">123456789</prop>
+             </props>
+         </property>
+     </bean>
+    <!--变相的也是通过get,set传值,用的不多
+    命名空间要加上
+    xmlns:p="http://www.springframework.org/schema/p"-->
+    <!--<bean class="com.spm.om.vo.User" id="user3"
+          p:userName="qiulc3" p:id="5" p:address="sh">
+    </bean>-->
+
+    <!--复杂注入
+    1.对象注入
+    2.数组注入
+    3.map注入
+    4.Properties注入
+
+    一键格式化代碼： Ctrl+Alt+L
+    -->
+   <bean class="com.spm.om.vo.Cat" id="cat">
+       <property name="name" value="catName"/>
+       <property name="remark" value="catRemark"/>
+   </bean>
+
+
+
+
+</beans>
