@@ -1,13 +1,8 @@
 package com.spm.om.array;
-
-
-
 import com.spm.om.vo.User;
 import org.apache.commons.lang3.ArrayUtils;
-
 import java.util.*;
 import java.util.stream.Collectors;
-
 /**
  * @author skyqlc
  * @name com.spm.om.array
@@ -55,16 +50,19 @@ public class arrays {
 
 
     public static void main(String[] args) {
-          List<Integer> ages= new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            ages.add(i);
+
+       String [] bglist = new String[]{"ebg","cnbg"};
+       Integer[] ordertypelist={1,2,3};
+
+        for (int i = 0; i <ordertypelist.length ; i++) {
+            System.out.println(ordertypelist[i]);
         }
-        System.out.println(ages);
-       // System.out.println(ages.stream());
-         ages = ages.stream().filter(a ->a>3 ).collect(Collectors.toList());
-        System.out.println(ages);
 
-
+        System.out.println("============");
+        for (String ia: bglist
+             ) {
+            System.out.println(ia);
+        }
 
 
 
